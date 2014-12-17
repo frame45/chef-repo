@@ -1,0 +1,2 @@
+#!/bin/bash
+rsync -avv --progress --rsh="ssh" root@mattyakel1.mylabserver.com:"/root/chef-repo/" "./chef-repo/"
