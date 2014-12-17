@@ -1,2 +1,11 @@
 #!/bin/bash
-rsync -avv --progress --rsh="ssh" root@mattyakel1.mylabserver.com:"/root/chef-repo/" "./chef-repo/"
+echo -e "\n Pull down.\n"
+sleep 1
+rsync -avv --progress --rsh="ssh" root@mattyakel1.mylabserver.com:"/root/chef-repo/" "." 
+echo -e "\nComplete.\n"
+sleep 1
+echo -e "\nPush up.\n"
+sleep 1
+rsync -avv --progress --rsh="ssh" "." root@mattyakel1.mylabserver.com:"/root/chef-repo/"
+echo -e "\nComplete.\n"
+exit
